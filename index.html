@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pack product photos for Etsy, Amazon, Shopify, and Instagram in one private browser session.">
+  <title>MarketPack — One drop, four storefronts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav><a class="logo" href="#">Market<span>Pack</span></a><a href="#pricing">$7 lifetime offer</a></nav>
+    <div class="hero">
+      <p class="tag">LOCAL-FIRST PRODUCT IMAGE PACKER</p>
+      <h1>One photo drop.<br><em>Four storefronts.</em></h1>
+      <p>Resize, fit, pad, rename, and sort product photos for Etsy, Amazon, Shopify, and Instagram—without uploading them to a server.</p>
+      <a class="cta" href="#packer">Pack up to 3 images free</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="proof"><span>✓ Files stay in your browser</span><span>✓ No account or watermark</span><span>✓ One organized ZIP</span></section>
+
+    <section id="packer" class="packer">
+      <div class="setup card">
+        <p class="tag dark">1 · CHOOSE OUTPUTS</p>
+        <h2>Build your pack</h2>
+        <label class="field">Product filename <input id="product" value="my-product" maxlength="70" placeholder="linen-tote-bag"></label>
+        <fieldset><legend>Marketplace presets <small>Reviewed 2026-08-24</small></legend>
+          <label class="market"><input type="checkbox" name="market" value="etsy" checked><span><b>Etsy listing</b><small>2000 × 2000 JPG</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="amazon" checked><span><b>Amazon main</b><small>1600 × 1600 JPG · white pad</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="shopify" checked><span><b>Shopify product</b><small>2048 × 2048 JPG</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="instagram" checked><span><b>Instagram portrait</b><small>1080 × 1350 JPG</small></span></label>
+        </fieldset>
+        <div class="two">
+          <label class="field">Resize mode<select id="mode"><option value="contain">Fit + pad (no crop)</option><option value="cover">Fill + center crop</option></select></label>
+          <label class="field">Pad color<input id="background" type="color" value="#ffffff"></label>
+        </div>
+        <label class="field">JPG quality <span id="quality-value">90%</span><input id="quality" type="range" min="70" max="100" value="90"></label>
+        <details><summary>What these presets mean</summary><p>They are convenient export sizes, not a guarantee of marketplace acceptance. Content, category, file-size, background, and rights rules still apply. Amazon main images always receive a white background.</p></details>
+      </div>
+
+      <div class="drop card">
+        <p class="tag dark">2 · DROP & DOWNLOAD</p>
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Choose up to three images">
+          <input id="files" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+          <div class="drop-icon">↓</div><h2>Drop product photos</h2><p>JPG, PNG, or WebP · up to 3 images in the free demo</p><button id="browse" class="cta small" type="button">Choose images</button>
+        </div>
+        <div id="queue" class="queue" aria-live="polite"></div>
+        <button id="pack" class="cta pack" type="button" disabled>Create marketplace ZIP</button>
+        <p id="status" class="status" role="status">Choose at least one image and marketplace.</p>
+      </div>
+    </section>
+
+    <section class="inside">
+      <p class="tag dark">WHAT YOU GET</p><h2>Already named. Already sorted.</h2>
+      <pre>marketpack-my-product.zip
+├── amazon/my-product-01-amazon.jpg
+├── etsy/my-product-01-etsy.jpg
+├── instagram/my-product-01-instagram.jpg
+└── shopify/my-product-01-shopify.jpg</pre>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div><p class="tag">FOUNDING OFFER</p><h2>Stop exporting the same photos four times.</h2><p>The free demo packs 3 source images. The planned lifetime unlock removes that source-image limit while keeping the same local ZIP workflow.</p></div>
+      <div class="price"><small>PLANNED ONE-TIME PRICE</small><strong>$7</strong><p>Unlimited source images · Same four presets · No subscription</p><a class="cta" href="https://github.com/softpeanut/marketpack/issues/new?title=I%27d%20buy%20the%20%247%20unlimited%20version&amp;body=My%20main%20marketplaces%20are%3A%20%0AApproximate%20images%20per%20batch%3A%20" rel="noopener">Request the $7 version</a><b>Checkout is not active. No payment is collected by this prototype.</b></div>
+    </section>
+  </main>
+  <footer>MarketPack · No uploads. No API. No image data leaves this page.</footer>
+  <script src="core.js"></script><script src="app.js"></script>
+</body>
+</html>
