@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Etsy·Amazon·Shopify·Instagram 상품 이미지를 한 원본에서 만들 때 크기, 맞춤·자르기, 흰 여백, 파일명과 검수 순서를 정리한 실무 가이드입니다.">
+  <link rel="canonical" href="https://softpeanut.github.io/marketpack/marketplace-image-guide-ko.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="쇼핑몰 상품 이미지 크기 일괄 변경 실무 가이드">
+  <meta property="og:description" content="한 원본에서 여러 마켓용 JPG와 폴더 ZIP을 만들기 전 확인할 항목을 정리했습니다.">
+  <meta property="og:url" content="https://softpeanut.github.io/marketpack/marketplace-image-guide-ko.html">
+  <meta property="og:image" content="https://softpeanut.github.io/marketpack/assets/demo-marketplace.jpg">
+  <title>쇼핑몰 상품 이미지 크기 일괄 변경 — Etsy·Amazon·Shopify 가이드</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <header>
+    <nav><a class="logo" href="ko.html">Market<span>Pack</span></a><a href="ko.html#packer">무료 변환 도구</a><a href="ko.html#pricing">이미지 패킹 의뢰</a></nav>
+    <div class="hero">
+      <p class="tag">2026-08-24 공식 안내 검토</p>
+      <h1>상품 이미지 크기 변경은<br><em>픽셀만 맞추면 끝이 아닙니다.</em></h1>
+      <p>한 원본을 여러 쇼핑몰과 소셜 채널에 쓸 때 크기, 자르기, 배경, 파일명과 최종 검수를 함께 관리하는 순서입니다.</p>
+      <a class="cta" href="ko.html#packer">이미지 3장 무료 변환</a>
+    </div>
+  </header>
+  <main>
+    <section class="inside">
+      <p class="tag dark">1 · 원본부터 보호</p>
+      <h2>원본을 덮어쓰지 말고 출력본을 따로 만드세요.</h2>
+      <p>상품 사진은 원본 폴더를 그대로 두고 마켓별 출력 폴더를 새로 만드는 편이 안전합니다. 같은 촬영본이라도 정사각형과 세로형은 잘리는 범위가 다르므로, 한 파일을 반복 저장하면 되돌리기 어려워집니다.</p>
+      <pre>product-photo-01.jpg
+├── etsy/product-photo-01-etsy.jpg
+├── amazon/product-photo-01-amazon.jpg
+├── shopify/product-photo-01-shopify.jpg
+└── instagram/product-photo-01-instagram.jpg</pre>
+    </section>
+    <section class="inside">
+      <p class="tag dark">2 · 맞춤과 자르기</p>
+      <h2>상품 전체가 중요하면 맞춤, 화면 점유가 중요하면 자르기.</h2>
+      <p><strong>전체 맞춤 + 여백</strong>은 원본 비율을 유지해 상품 가장자리를 보존합니다. 대신 남는 공간에 배경색이 들어갑니다. <strong>채우기 + 중앙 자르기</strong>는 출력 프레임을 가득 채우지만 긴 쪽 가장자리가 잘릴 수 있습니다. 로고, 포장 문구, 손잡이처럼 가장자리 정보가 있으면 맞춤을 먼저 검토하세요.</p>
+    </section>
+    <section class="inside">
+      <p class="tag dark">3 · 현재 프리셋</p>
+      <h2>편의용 시작값이며 승인 보증은 아닙니다.</h2>
+      <p>MarketPack은 Etsy 2000×2000, Amazon 1600×1600 흰 여백, Shopify 2048×2048, Instagram 1080×1350 JPG를 만듭니다. Etsy는 2000px 이상 이미지를 권장하고, Amazon 안내는 긴 변 1600px 이상과 메인 이미지의 순백 배경을 설명하며, Shopify는 정사각형 상품 이미지에 2048×2048을 안내합니다.</p>
+      <p><a href="https://help.etsy.com/hc/en-gb/articles/115015663347-Requirements-and-Best-Practices-for-Images-in-Your-Etsy-Shop" rel="noopener">Etsy 이미지 안내</a> · <a href="https://sellercentral.amazon.com/seller-forums/discussions/t/7366420bc9ccfb8656594e6edcf4ece6" rel="noopener">Amazon Seller Central 안내</a> · <a href="https://help.shopify.com/en/manual/products/product-media/product-media-types" rel="noopener">Shopify 상품 미디어 안내</a></p>
+      <p>카테고리, 파일 크기, 콘텐츠, 배경과 권리 조건은 별도이며 바뀔 수 있습니다. Instagram 1080×1350은 편의용 4:5 출력값이고 익명 접근 가능한 Meta 공식 페이지에서 정확한 픽셀 권고를 확인하지 못했으므로 필수 규격으로 표현하지 않습니다.</p>
+    </section>
+    <section class="inside">
+      <p class="tag dark">4 · 업로드 전 검수</p>
+      <h2>ZIP을 만든 뒤 네 가지만 확인하세요.</h2>
+      <ol>
+        <li>상품, 문구, 로고가 잘리지 않았는지</li>
+        <li>Amazon 메인 이미지처럼 흰 배경이 필요한 출력이 실제로 흰색인지</li>
+        <li>폴더와 파일명이 상품별로 섞이지 않았는지</li>
+        <li>업로드하려는 카테고리의 최신 콘텐츠·권리 규정을 충족하는지</li>
+      </ol>
+      <p>자동 크기 변경은 시각적 적합성이나 마켓 승인을 판단하지 않습니다. 최종 파일을 직접 열어 확인해야 합니다.</p>
+    </section>
+    <section class="pricing">
+      <div><p class="tag">바로 실행</p><h2>사진 세 장으로 실제 ZIP을 확인하세요.</h2><p>무료 도구는 가입·업로드·워터마크 없이 네 마켓 폴더를 브라우저 안에서 만듭니다.</p></div>
+      <div class="price"><a class="cta" href="ko.html#packer">무료 변환 시작</a><p>사진이 많다면 149,000원 고정 범위 작업의 적합성을 데이터 없이 확인할 수 있습니다.</p><a href="https://github.com/softpeanut/marketpack/issues/new?template=image-pack-service-ko.yml" rel="noopener">작업 적합성 확인</a></div>
+    </section>
+  </main>
+  <footer>MarketPack · 비공식 독립 도구 · 마켓 규정은 실제 업로드 전에 다시 확인하세요.</footer>
+</body>
+</html>

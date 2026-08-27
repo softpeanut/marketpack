@@ -1,6 +1,6 @@
 # MarketPack
 
-MarketPack turns up to three source product photos into marketplace-sized JPGs, grouped by platform inside a single ZIP. Processing and ZIP creation happen entirely in the browser. [Try the live tool](https://softpeanut.github.io/marketpack/) or inspect the [checkable output demo](https://softpeanut.github.io/marketpack/#demo).
+MarketPack turns up to three source product photos into marketplace-sized JPGs, grouped by platform inside a single ZIP. Processing and ZIP creation happen entirely in the browser. [Try the live tool](https://softpeanut.github.io/marketpack/), inspect the [checkable output demo](https://softpeanut.github.io/marketpack/#demo), or read the [Korean marketplace-image workflow guide](https://softpeanut.github.io/marketpack/marketplace-image-guide-ko.html).
 
 ## Product and service
 
