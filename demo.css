@@ -45,8 +45,41 @@
   font-size: 13px;
 }
 
+.tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 2px solid var(--line);
+  background: #fff;
+}
+
+.tip b,
+.tip span {
+  display: block;
+}
+
+.tip span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tip a {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-weight: 850;
+}
+
 @media (max-width: 760px) {
   .demo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tip {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
