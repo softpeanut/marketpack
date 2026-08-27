@@ -1,0 +1,48 @@
+name: Product image-pack fit check
+description: Check whether one non-sensitive image batch fits the fixed $99 pilot.
+title: "Image-pack fit check: "
+labels:
+  - service-inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public fit check, not a booking or payment request. Do not upload product images, credentials, private links, customer information, or unreleased product details.
+  - type: textarea
+    id: batch
+    attributes:
+      label: Batch summary
+      description: Describe the products and approximate image count without sharing the files.
+    validations:
+      required: true
+  - type: textarea
+    id: targets
+    attributes:
+      label: Two requested export targets
+      description: Name the platforms, dimensions, fit/crop preference, background, and naming convention.
+    validations:
+      required: true
+  - type: dropdown
+    id: count
+    attributes:
+      label: Source-image count
+      options:
+        - 1–5
+        - 6–10
+        - 11–20
+        - More than 20 (outside pilot)
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Safety and scope
+      options:
+        - label: I will not post images, credentials, customer data, or private links in this issue.
+          required: true
+        - label: I own or am authorized to process the images, and they contain no sensitive material.
+          required: true
+        - label: I understand this is resizing, naming, and packaging—not retouching, rights clearance, or marketplace approval.
+          required: true
+        - label: I understand scope, delivery, payment, and cancellation terms must be agreed before work starts.
+          required: true
