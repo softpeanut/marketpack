@@ -1,0 +1,48 @@
+name: 상품 이미지 패킹 적합성 확인
+description: 149,000원 고정 범위 서비스에 맞는 이미지 묶음인지 확인합니다.
+title: "상품 이미지 패킹 적합성 확인: "
+labels:
+  - service-inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이 양식은 공개 적합성 확인용이며 예약이나 결제 요청이 아닙니다. 상품 이미지, 계정 정보, 고객 정보, 비공개 링크, 미출시 상품 정보를 올리지 마세요.
+  - type: textarea
+    id: batch
+    attributes:
+      label: 이미지 묶음 요약
+      description: 파일을 공유하지 말고 상품 종류와 대략적인 이미지 수만 설명해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: targets
+    attributes:
+      label: 원하는 출력 규격 두 가지
+      description: 플랫폼, 크기, 맞춤/자르기, 배경색, 파일명 규칙을 적어 주세요.
+    validations:
+      required: true
+  - type: dropdown
+    id: count
+    attributes:
+      label: 원본 이미지 수
+      options:
+        - 1–5장
+        - 6–10장
+        - 11–20장
+        - 20장 초과 (파일럿 범위 밖)
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: 안전 및 작업 범위
+      options:
+        - label: 공개 이슈에 이미지, 계정 정보, 고객 데이터, 비공개 링크를 올리지 않겠습니다.
+          required: true
+        - label: 이미지 처리 권한이 있으며 민감한 내용이 포함되지 않았습니다.
+          required: true
+        - label: 이 서비스는 크기 조정, 파일명, 패킹이며 리터칭, 권리 확인, 마켓 승인이 아님을 이해합니다.
+          required: true
+        - label: 작업 전 범위, 전달, 결제, 취소 조건을 서면 합의해야 함을 이해합니다.
+          required: true
