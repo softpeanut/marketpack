@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://softpeanut.github.io/marketpack/sitemap.xml
