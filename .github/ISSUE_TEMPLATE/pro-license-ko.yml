@@ -1,0 +1,46 @@
+name: MarketPack Pro 주문 요청
+description: 이미지 없이 개인 또는 팀 오프라인 배치 라이선스를 요청합니다.
+title: "MarketPack Pro 주문 요청"
+labels:
+  - product-order
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이 공개 요청 자체는 결제가 아닙니다. 이미지, 파일명, 연락처, 결제 증빙, 인증정보, 고객 데이터 또는 비공개 링크를 올리지 마세요.
+
+        판매자가 재고를 확인한 뒤 선택한 등급에 맞는 이슈 전용 일회용 BOLT11 인보이스를 30분 결제 기한과 함께 안내합니다. 서면 조건을 수락한 뒤에만 결제하세요. 판매자는 인보이스 상태 주소로 공개 결제 증빙 없이 정산 여부를 확인합니다. 결제 확인 후 영업일 1일 안에 구매자 전용 비공개 GitHub 저장소로 라이선스 ZIP을 전달합니다.
+
+        이용 조건: https://softpeanut.github.io/marketpack/pro-terms-ko.html
+  - type: dropdown
+    id: license-tier
+    attributes:
+      label: 라이선스 등급
+      options:
+        - 개인 — 15,000 sats — 사용자 1명
+        - 팀 — 100,000 sats — 하나의 법인 조직 안에서 기명 사용자 최대 10명
+    validations:
+      required: true
+  - type: dropdown
+    id: expected-batch
+    attributes:
+      label: 평소 한 번에 처리할 이미지 수
+      options:
+        - 1–5장
+        - 6–10장
+        - 11–20장
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: 주문 범위 확인
+      options:
+        - label: 판매자가 선택한 등급에 맞는 이슈 전용 인보이스를 안내하기 전에는 결제하지 않겠습니다.
+          required: true
+        - label: 구매자 전용 비공개 GitHub 저장소로 파일을 전달받는 데 동의합니다.
+          required: true
+        - label: 이미지, 파일명, 연락처, 결제 증빙, 인증정보, 고객 데이터 또는 비공개 링크를 작성하지 않았습니다.
+          required: true
+        - label: 프리셋이 마켓 승인을 보장하지 않으며 모든 출력을 검토해야 함을 이해합니다.
+          required: true
