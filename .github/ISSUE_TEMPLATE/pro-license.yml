@@ -1,0 +1,46 @@
+name: MarketPack Pro order request
+description: Request a Personal or Team offline batch license without posting images.
+title: "MarketPack Pro order request"
+labels:
+  - product-order
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This public request is not payment. Do not post images, filenames, contact details, payment proof, credentials, customer data, or private links.
+
+        After availability is confirmed, the seller posts an issue-bound, single-use BOLT11 invoice matching the selected tier, with a 30-minute payment window. Pay only after accepting the written terms. The seller verifies settlement through the invoice status endpoint without public payment proof. After verified payment, the licensed ZIP is delivered within one business day through a buyer-only private GitHub repository.
+
+        Terms: https://softpeanut.github.io/marketpack/pro-terms.html
+  - type: dropdown
+    id: license-tier
+    attributes:
+      label: License tier
+      options:
+        - Personal — 15,000 sats — one user
+        - Team — 100,000 sats — up to 10 named users in one legal organization
+    validations:
+      required: true
+  - type: dropdown
+    id: expected-batch
+    attributes:
+      label: Typical images per batch
+      options:
+        - 1–5 images
+        - 6–10 images
+        - 11–20 images
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Order boundaries
+      options:
+        - label: I will not pay before the seller posts an issue-bound invoice matching my selected tier.
+          required: true
+        - label: I agree to receive the archive through a buyer-only private GitHub repository.
+          required: true
+        - label: I posted no images, filenames, contact details, payment proof, credentials, customer data, or private links.
+          required: true
+        - label: I understand presets do not guarantee marketplace approval and I must review every output.
+          required: true
