@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="상품 사진을 서버에 올리지 않고 마켓별 규격으로 변환하거나, 20장까지 고정 범위 이미지 패킹 서비스를 의뢰하세요.">
+  <link rel="canonical" href="https://softpeanut.github.io/marketpack/ko.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MarketPack — 상품 이미지 일괄 변환">
+  <meta property="og:description" content="상품 사진을 마켓별 크기와 폴더로 정리합니다. 브라우저 무료 도구와 149,000원 고정 범위 서비스.">
+  <meta property="og:url" content="https://softpeanut.github.io/marketpack/ko.html">
+  <meta name="twitter:card" content="summary">
+  <title>MarketPack — 상품 이미지 일괄 변환</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav><a class="logo" href="ko.html">Market<span>Pack</span></a><a href="index.html" lang="en">English</a><a href="#pricing">149,000원 이미지 패킹</a></nav>
+    <div class="hero">
+      <p class="tag">브라우저 안에서 처리하는 상품 이미지 도구</p>
+      <h1>한 번 선택하고,<br><em>마켓별로 정리하세요.</em></h1>
+      <p>상품 사진을 Etsy, Amazon, Shopify, Instagram용 크기로 맞추고 이름과 폴더를 정리합니다. 이미지가 서버로 전송되지 않습니다.</p>
+      <a class="cta" href="#packer">이미지 3장 무료 변환</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="proof"><span>✓ 파일은 브라우저 안에서만 처리</span><span>✓ 가입·워터마크 없음</span><span>✓ 정리된 ZIP 한 번에 다운로드</span></section>
+
+    <section id="packer" class="packer">
+      <div class="setup card">
+        <p class="tag dark">1 · 출력 설정</p>
+        <h2>이미지 팩 만들기</h2>
+        <label class="field">상품 파일명 <input id="product" value="my-product" maxlength="70" placeholder="linen-tote-bag"></label>
+        <fieldset><legend>마켓 프리셋 <small>2026-08-24 확인</small></legend>
+          <label class="market"><input type="checkbox" name="market" value="etsy" checked><span><b>Etsy 상품</b><small>2000 × 2000 JPG</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="amazon" checked><span><b>Amazon 메인</b><small>1600 × 1600 JPG · 흰 여백</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="shopify" checked><span><b>Shopify 상품</b><small>2048 × 2048 JPG</small></span></label>
+          <label class="market"><input type="checkbox" name="market" value="instagram" checked><span><b>Instagram 세로형</b><small>1080 × 1350 JPG</small></span></label>
+        </fieldset>
+        <div class="two">
+          <label class="field">크기 조정<select id="mode"><option value="contain">전체 맞춤 + 여백</option><option value="cover">채우기 + 중앙 자르기</option></select></label>
+          <label class="field">여백 색상<input id="background" type="color" value="#ffffff"></label>
+        </div>
+        <label class="field">JPG 품질 <span id="quality-value">90%</span><input id="quality" type="range" min="70" max="100" value="90"></label>
+        <details><summary>프리셋 안내</summary><p>편의를 위한 출력 크기이며 마켓 승인 보장은 아닙니다. 업로드 전에 카테고리, 콘텐츠, 배경, 파일 크기, 권리 규정을 확인하세요. Amazon 메인 이미지는 항상 흰 배경으로 출력됩니다.</p></details>
+      </div>
+
+      <div class="drop card">
+        <p class="tag dark">2 · 선택 후 다운로드</p>
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="이미지 최대 3장 선택">
+          <input id="files" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+          <div class="drop-icon">↓</div><h2>상품 사진을 놓으세요</h2><p>JPG, PNG, WebP · 무료 도구는 최대 3장</p><button id="browse" class="cta small" type="button">이미지 선택</button>
+        </div>
+        <div id="queue" class="queue" aria-live="polite"></div>
+        <button id="pack" class="cta pack" type="button" disabled>마켓별 ZIP 만들기</button>
+        <p id="status" class="status" role="status">이미지와 마켓을 하나 이상 선택하세요.</p>
+      </div>
+    </section>
+
+    <section class="inside">
+      <p class="tag dark">출력 결과</p><h2>파일명과 폴더까지 자동 정리</h2>
+      <pre>marketpack-my-product.zip
+├── amazon/my-product-01-amazon.jpg
+├── etsy/my-product-01-etsy.jpg
+├── instagram/my-product-01-instagram.jpg
+└── shopify/my-product-01-shopify.jpg</pre>
+    </section>
+
+    <section class="inside">
+      <p class="tag dark">자주 묻는 질문</p><h2>변환 전 확인사항</h2>
+      <h3>상품 사진이 서버로 전송되나요?</h3><p>아니요. 이미지 읽기, 크기 조정, JPG 변환, 파일명 생성, ZIP 생성은 이 브라우저에서 실행됩니다. 현재 페이지에는 백엔드, 분석 도구, 쿠키, 저장소가 없습니다.</p>
+      <h3>무료 도구는 무엇을 지원하나요?</h3><p>JPG, PNG, WebP 이미지 최대 3장과 네 가지 마켓용 JPG 폴더를 지원합니다. 전체 이미지를 보존하려면 맞춤과 여백을, 가장자리를 잘라도 괜찮다면 채우기와 중앙 자르기를 선택하세요.</p>
+      <h3>마켓 등록 승인을 보장하나요?</h3><p>아니요. 출력 크기 프리셋일 뿐 인증이나 승인 서비스가 아닙니다. 실제 업로드 전에 최신 규정을 확인하세요.</p>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div><p class="tag">고정 범위 서비스</p><h2>실제 상품 이미지 묶음이 있나요?</h2><p>149,000원 파일럿은 민감하지 않은 상품 사진 최대 20장, 합의한 출력 규격 두 가지, 파일명·폴더 정리, 예외 보고서, 수정 1회를 포함합니다. 리터칭, 배경 제거, 권리 확인, 마켓 승인은 포함하지 않습니다.</p></div>
+      <div class="price"><small>1회 고정 범위</small><strong>149,000원</strong><p>원본 최대 20장 · 출력 규격 2개 · 수정 1회</p><a class="cta" href="https://github.com/softpeanut/marketpack/issues/new?template=image-pack-service-ko.yml" rel="noopener">작업 적합성 확인</a><b>공개 이슈에 이미지나 비공개 링크를 올리지 마세요. 작업 시작 전에 범위, 전달, 결제, 취소 조건을 서면 합의합니다.</b></div>
+    </section>
+  </main>
+  <footer>MarketPack · 업로드 없음 · 외부 API 없음 · 이미지 데이터는 페이지 밖으로 나가지 않습니다.</footer>
+  <script src="core.js"></script><script src="app.js"></script>
+</body>
+</html>
