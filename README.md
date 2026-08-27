@@ -2,14 +2,15 @@
 
 MarketPack turns up to three source product photos into marketplace-sized JPGs, grouped by platform inside a single ZIP. Processing and ZIP creation happen entirely in the browser.
 
-## Product and price hypothesis
+## Product and service
 
 - **Buyer:** Etsy/Amazon/Shopify sellers who also promote products on Instagram.
 - **Job:** Export the same product shoot repeatedly without manual resizing, naming, or folder sorting.
 - **Free demo:** Up to 3 source images, all four presets, real JPG output, real ZIP download, no watermark.
-- **Planned paid offer:** **$7 once** to remove the source-image limit while retaining the same four presets and local workflow.
-- **CTA:** A prefilled public GitHub issue requesting the paid version. The prototype does not imply checkout is live and collects no payment.
-- **Strong validation:** A real launch-notification request or checkout conversion. ZIP creation alone proves utility, not willingness to pay.
+- **Fixed-scope service:** **$99** for up to 20 non-sensitive source images, two agreed export targets, organized filenames and folders, an exception report, and one revision.
+- **Exclusions:** Retouching, background removal, rights clearance, marketplace approval, sensitive material, and ongoing pipelines.
+- **CTA:** A public fit-check issue that forbids uploading images or private links. Scope, safe transfer, delivery, payment, and cancellation terms are agreed before work starts. An issue is not a booking.
+- **Strong validation:** A signed scope and settled payment. Tool use or an inquiry alone is not revenue.
 
 ## Presets reviewed 2026-08-24
 
@@ -55,8 +56,8 @@ During the 2026-08-24 local verification, the automated tests and HTTP serving c
 
 1. Deploy to an owner-authorized static host with GitHub Issues enabled.
 2. Validate interest using privacy-respecting aggregate page/CTA events only if the owner approves analytics.
-3. Test and document practical browser/memory limits before releasing unlimited batches.
-4. Add checkout and a license/unlock mechanism only with an owner-controlled merchant account, payout/KYC, terms, refund policy, and tax handling.
-5. Recheck presets against current official marketplace documentation before launch.
+3. Test and document practical browser/memory limits before increasing the free tool's three-image cap.
+4. Agree service scope, a private transfer method, payment, cancellation terms, and tax handling before accepting work.
+5. Recheck requested export targets against current official marketplace documentation before delivery.
 
 No revenue exists until a settled, withdrawable payment is verified.
