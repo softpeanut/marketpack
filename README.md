@@ -7,6 +7,7 @@ MarketPack turns up to three source product photos into marketplace-sized JPGs, 
 - **Buyer:** Etsy/Amazon/Shopify sellers who also promote products on Instagram.
 - **Job:** Export the same product shoot repeatedly without manual resizing, naming, or folder sorting.
 - **Free demo:** Up to 3 source images, all four presets, real JPG output, real ZIP download, no watermark.
+- **Optional tip:** Free-tool users may send 2 sats or more to the verified Lightning address. A tip buys no service, support, feature, or marketplace approval and is separate from the pilot.
 - **Fixed-scope service:** **$99** for up to 20 non-sensitive source images, two agreed export targets, organized filenames and folders, an exception report, and one revision.
 - **Exclusions:** Retouching, background removal, rights clearance, marketplace approval, sensitive material, and ongoing pipelines.
 - **CTA:** [One pilot slot is currently listed](https://github.com/softpeanut/marketpack/issues/7). Its fit-check templates forbid uploading images or private links. Scope, safe transfer, delivery, payment, and cancellation terms are agreed before work starts. An issue is not a booking. Lightning settlement is available only after an exact sats quote is agreed in writing; buyers are told not to pay early.
