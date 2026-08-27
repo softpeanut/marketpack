@@ -70,6 +70,12 @@ node service/pack.mjs \
 - Compatible static hosting can cost $0.
 - Large source images consume browser memory. The prototype intentionally caps inputs at three.
 
+## License
+
+The software source and documentation are available under the [MIT License](LICENSE). The three
+files under `assets/demo-*.jpg` are generated demonstration material, not seller content, and are
+included only to document actual output shapes; the tool does not depend on them for conversion.
+
 ## Revenue gates
 
 1. Deploy to an owner-authorized static host with GitHub Issues enabled.
