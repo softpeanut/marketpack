@@ -31,9 +31,10 @@ test("creates exact contain and cover outputs without changing input", () => {
     const before = readFileSync(source);
 
     const containOutput = join(root, "contain");
-    const contain = runPack(parseArgs(["--input", input, "--output", containOutput, "--target", "square:64x64", "--slug", "blue-card"]));
-    assert.deepEqual({ sources: contain.sources, outputs: contain.outputs }, { sources: 1, outputs: 1 });
+    const contain = runPack(parseArgs(["--input", input, "--output", containOutput, "--target", "square:64x64", "--target", "banner:80x40", "--slug", "blue-card"]));
+    assert.deepEqual({ sources: contain.sources, outputs: contain.outputs }, { sources: 1, outputs: 2 });
     assert.deepEqual(imageSize(join(containOutput, "square", "blue-card-01-square.jpg")), [64, 64]);
+    assert.deepEqual(imageSize(join(containOutput, "banner", "blue-card-01-banner.jpg")), [80, 40]);
 
     const coverOutput = join(root, "cover");
     runPack(parseArgs(["--input", input, "--output", coverOutput, "--target", "portrait:40x60", "--mode", "cover"]));
