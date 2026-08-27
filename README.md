@@ -39,11 +39,25 @@ No packages or build step are required.
 ```sh
 python3 -m http.server 8080
 node test.mjs
+node --test service/pack.test.mjs
 ```
 
 Open `http://localhost:8080`, drop one to three JPG/PNG/WebP images, create a ZIP, and confirm that each chosen platform folder contains correctly sized JPGs. Node tests cover preset data, geometry, naming, CRC-32, and ZIP structure; browser image decoding, Canvas output, drag-and-drop, and download require a real-browser smoke test.
 
 During the 2026-08-24 local verification, the automated tests and HTTP serving checks passed, but macOS denied the computer-use accessibility read of the available browser. The real-browser image/drop/download smoke test therefore remains an explicit pre-deployment gate rather than a claimed pass.
+
+The paid pilot has a separate screenless delivery harness at `service/pack.mjs`. On macOS it accepts 1–20 regular JPG, PNG, or WebP files, one or two explicitly supplied targets, contain/pad or cover/crop mode, and a brand-safe output slug. It builds in a new temporary directory, verifies every final dimension, renames the completed directory atomically, rejects existing output paths and symlink inputs, and never writes to source files. Its integration test creates synthetic imagery and verifies both contain and cover output dimensions with `/usr/bin/sips`.
+
+```sh
+node service/pack.mjs \
+  --input /safe/path/source-images \
+  --output /safe/path/completed-pack \
+  --target shop:2048x2048 \
+  --target social:1080x1350 \
+  --mode contain \
+  --background FFFFFF \
+  --slug linen-tote
+```
 
 ## Privacy and cost
 
