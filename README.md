@@ -9,7 +9,7 @@ MarketPack turns up to three source product photos into marketplace-sized JPGs, 
 - **Free demo:** Up to 3 source images, all four presets, real JPG output, real ZIP download, no watermark.
 - **Fixed-scope service:** **$99** for up to 20 non-sensitive source images, two agreed export targets, organized filenames and folders, an exception report, and one revision.
 - **Exclusions:** Retouching, background removal, rights clearance, marketplace approval, sensitive material, and ongoing pipelines.
-- **CTA:** A public fit-check issue that forbids uploading images or private links. Scope, safe transfer, delivery, payment, and cancellation terms are agreed before work starts. An issue is not a booking.
+- **CTA:** A public fit-check issue that forbids uploading images or private links. Scope, safe transfer, delivery, payment, and cancellation terms are agreed before work starts. An issue is not a booking. Lightning settlement is available only after an exact sats quote is agreed in writing; buyers are told not to pay early.
 - **Strong validation:** A signed scope and settled payment. Tool use or an inquiry alone is not revenue.
 
 ## Presets reviewed 2026-08-24
